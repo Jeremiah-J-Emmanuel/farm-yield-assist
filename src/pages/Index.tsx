@@ -4,7 +4,8 @@ import { SoilHealthCard } from '@/components/dashboard/SoilHealthCard';
 import { YieldPredictionCard } from '@/components/dashboard/YieldPredictionCard';
 import { AlertsCard } from '@/components/dashboard/AlertsCard';
 import { SMSHistoryCard } from '@/components/dashboard/SMSHistoryCard';
-import { Tractor, MessageSquare, TrendingUp, Activity, MapPin, Calendar, User } from 'lucide-react';
+import { Tractor, MessageSquare, TrendingUp, Activity, MapPin, Calendar, User, Smartphone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Index = () => {
   return (
@@ -17,7 +18,7 @@ const Index = () => {
               <Tractor className="w-6 h-6 text-white" />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-agri-green">AgriMonitor</h1>
+              <h1 className="text-xl font-bold text-agri-green">Farassist</h1>
               <p className="text-sm text-muted-foreground">Intelligent Farming Solutions</p>
             </div>
           </div>
@@ -30,9 +31,18 @@ const Index = () => {
               <Calendar className="w-4 h-4" />
               March 15, 2024
             </div>
-            <div className="flex items-center gap-2 text-sm text-foreground">
-              <User className="w-4 h-4" />
-              Jean Baptiste Uwimana
+            <div className="flex items-center gap-4">
+              <Link 
+                to="/sms" 
+                className="flex items-center gap-2 text-sm text-foreground hover:text-agri-green transition-colors px-3 py-1 rounded-lg hover:bg-agri-green-bg"
+              >
+                <Smartphone className="w-4 h-4" />
+                SMS System
+              </Link>
+              <div className="flex items-center gap-2 text-sm text-foreground">
+                <User className="w-4 h-4" />
+                Jean Baptiste Uwimana
+              </div>
             </div>
           </div>
         </div>
